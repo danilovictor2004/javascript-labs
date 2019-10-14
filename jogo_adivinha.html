@@ -1,0 +1,33 @@
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	
+	function sorteia(n){
+		var numeroSorteado = Math.round(Math.random() * n);
+		return numeroSorteado;
+	}
+	
+	var numeroPensado = sorteia(10);
+	var chute = parseInt(prompt("Já pensei. Qual número você acha que é?"));
+	
+	if(isNaN(chute)){
+		alert("Apenas números são válidos");
+	} else {
+		if(chute == numeroPensado){
+		document.write("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+		pulaLinha();
+		} else {
+			document.write("Você errou! Eu tinha pensado no " + numeroPensado);
+			pulaLinha();
+		}
+	
+		if(chute > numeroPensado){
+			document.write("O chute é maior que o número pensado");
+		} else if(chute < numeroPensado){
+			document.write("O chute é menor que o número pensado");
+		} else {
+			document.write("O chute é igual ao número pensado");
+		}	
+	}
+</script>

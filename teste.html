@@ -1,0 +1,21 @@
+<script>
+	var numNotas = parseInt(prompt("Digite o número total de notas"));
+	
+	var somaNotas = 0;
+	
+	for(var i = 1; i<= numNotas; i++){
+		var nota = parseInt(prompt("Digite a nota " + i));
+		somaNotas += nota;
+	}
+	
+	var media = somaNotas / numNotas;
+	alert("A media do aluno foi " + media.toFixed(2));
+	
+	if(media >= 7)
+		document.write("Aluno foi aprovado");
+	else if(media >=5)
+		document.write("Aluno em recuperação");
+	else
+		document.write("Aluno reprovado");
+
+</script>

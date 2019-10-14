@@ -1,0 +1,41 @@
+Nome: <input type="text" id="nome"/><br>
+Idade: <input type="text" id="idade"/><br>
+E-mail: <input type="text" id="email"/><br>
+<input type="submit" id="adiciona" value="Enviar"/>
+<input type="submit" id="lista" value="Listar"/>
+
+<script>
+	var contatos = [];
+	
+	var nomeInput = document.getElementById("nome");
+	var idadeInput = document.getElementById("idade");
+	var emailInput = document.getElementById("email");
+	var adicionar = document.getElementById("adiciona");
+	adicionar.onclick = adicionarContato;
+	var listar = document.getElementById("lista");
+	listar.onclick = lista; 
+	
+	function adicionarContato(){		
+		var pessoa = {
+			nome: nomeInput.value,
+			idade: idadeInput.value,
+			email: emailInput.value
+		};
+		
+		contatos.push(pessoa);
+		limpaCampos();
+	}
+	
+	function lista(){
+		for(var i = 0; i < contatos.length; i++){
+			document.write(contatos[i].nome + "<br/>");
+		}
+	}
+	
+	function limpaCampos(){
+		nomeInput.value = "";
+		idadeInput.value = "";
+		emailInput.value = "";
+		document.getElementById("nome").focus();
+	}
+</script>

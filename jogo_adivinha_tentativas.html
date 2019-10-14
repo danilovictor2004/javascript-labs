@@ -1,0 +1,24 @@
+<script>
+	var numeroPensado = Math.round(Math.random() * 10);
+	
+	var numeroDaTentativa = 1;
+	
+	while(true){
+		var chute = prompt("Qual número você acha que é?");
+		if(chute == numeroPensado){
+			alert("Parabéns, você acertou");
+			break;
+		} else{
+			alert("Errou. Será que ainda tem mais tentativas?");
+			if(chute > numeroPensado){
+				alert("Dica: O numero é menor que " + chute);
+			} else{
+				alert("Dica: O número é maior que " + chute);
+			}
+		}
+		numeroDaTentativa++;
+	}
+	
+	document.write("O número que tentou adivinhar é: " + numeroPensado + "<br>");
+	document.write("Você tentou acertar " + numeroDaTentativa + " vezes");
+</script>
