@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+section {
+    width: 350px;
+    background: rgb(149, 149, 218);
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px #000000;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    margin: 5px 0px;
+    width: calc(100% - 15px);
+}
+
+.btn-calcular {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 30%;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#resultado {
+    margin: 10px 0px;
+    text-align: center;
+    color: white;
+}

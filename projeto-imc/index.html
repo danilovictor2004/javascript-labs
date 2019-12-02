@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de IMC</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Calcular IMC</h1>
+            <form action="#">
+                <label for="txtAltura">Altura</label>
+                <input type="text" name="txtAltura" id="txtAltura">
+
+                <label for="txtPeso">Peso</label>
+                <input type="text" name="txtPeso" id="txtPeso">
+
+                <input type="button" value="Calcular" class="btn-calcular">
+            </form>
+
+            <div id="resultado">
+                <!-- exibe o resultado dinâmico via JS-->    
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
