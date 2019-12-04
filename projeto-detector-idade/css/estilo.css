@@ -1,0 +1,54 @@
+body {
+    background-color: rgba(109, 109, 221, 0.966);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header {
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+section {
+    width: 330px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px #000000;
+}
+
+form {
+    display: inline-block;
+}
+
+#txtAnoNasc {
+    border: 1px solid #000000;
+    padding: 5px;
+    width: calc(330px - 50%);
+}
+
+.btn-detectar {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    cursor: pointer;
+}
+
+#resultado {
+    text-align: center;
+}
+
+#foto{
+    margin: 10px 0px;
+}
+
+#imagem {
+    margin-left: 40px;
+}

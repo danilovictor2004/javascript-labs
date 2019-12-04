@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detector de idades</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Detector de idades</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="#">
+                <label for="txtAnoNasc">Ano de nascimento</label>
+                <input type="number" name="txtAnoNasc" id="txtAnoNasc" min="4" placeholder="XXXX">
+
+                <p>
+                    Sexo:
+                    <input type="radio" name="sexo" id="masc" checked>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="sexo" id="fem">
+                    <label for="fem">Feminino</label>
+                </p>
+                <input type="button" value="Detectar" class="btn-detectar">
+            </form>
+
+            <div id="resultado">
+                Preencha os dados corretamente!
+            </div>
+
+            <div id="foto">
+                <img src="" alt="" id="imagem">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
