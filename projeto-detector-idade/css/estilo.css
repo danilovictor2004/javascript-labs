@@ -43,12 +43,10 @@ form {
 
 #resultado {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #foto{
-    margin: 10px 0px;
-}
-
-#imagem {
-    margin-left: 40px;
+    width: 250px;
+    margin: auto;
 }
