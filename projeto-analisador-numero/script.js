@@ -1,5 +1,6 @@
 var adicionar = document.querySelector('.btn-calcular');
 var finalizar = document.querySelector('#btn-finalizar');
+var lista = document.querySelector('#lista');
 var numeros = [];
 
 adicionar.addEventListener('click', () => {
@@ -13,6 +14,9 @@ adicionar.addEventListener('click', () => {
         limparDados();
     } else {
         adicionaNumero(num);
+        var item = document.createElement('option');
+        item.textContent = `O valor ${num} foi adicionado`;
+        lista.appendChild(item);
         limparDados();
     }
 });
@@ -31,22 +35,25 @@ finalizar.addEventListener('click', () => {
     var menor = numeros[0];
     var maior = numeros[0];
 
-    for(var n in numeros){
-        soma += numeros[n];
-        if(menor > numeros[n]){
-            menor = numeros[n];
-        } else {
-            maior = numeros[n];
+    if(numeros.length == 0){
+        alert("Adicione valores antes de finalizar");
+    } else{
+        for(var n in numeros){
+            soma += numeros[n];
+            if(menor > numeros[n]){
+                menor = numeros[n];
+            } else {
+                maior = numeros[n];
+            }
         }
-    }
-    var media = (soma / totalElementos).toFixed(2);
-
-    resultado.innerHTML += `<p>Total de elementos: ${totalElementos}</p>`;
-    resultado.innerHTML += `<p>A soma dos valores é: ${soma}</p>`;
-    resultado.innerHTML += `<p>Media dos valores: ${media}`;
-    resultado.innerHTML += `<p>Menor valor: ${menor}`;
-    resultado.innerHTML += `<p>Maior valor: ${maior}`;
+        var media = (soma / totalElementos).toFixed(2);
     
+        resultado.innerHTML += `<p>Total de elementos: ${totalElementos}</p>`;
+        resultado.innerHTML += `<p>A soma dos valores é: ${soma}</p>`;
+        resultado.innerHTML += `<p>Media dos valores: ${media}`;
+        resultado.innerHTML += `<p>Menor valor: ${menor}`;
+        resultado.innerHTML += `<p>Maior valor: ${maior}`;
+    }
 });
 
 function adicionaNumero(num) {

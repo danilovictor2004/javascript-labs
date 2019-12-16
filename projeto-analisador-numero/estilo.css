@@ -28,10 +28,10 @@ input {
     padding: 4px;
 }
 
-.btn-calcular {
+.btn-calcular, #btn-finalizar {
     cursor: pointer;
 }
 
 select {
-    width: 150px;
+    width: 180px;
 }
